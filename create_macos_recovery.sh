@@ -100,7 +100,7 @@ fi
 
 # Identify the target disk
 
-boot_drive=$(/usr/sbin/diskutil info "$(bless --info --getBoot)" | awk -F':' '/Volume Name/ { print $2 }' | sed -e 's/^[[:space:]]*//')
+boot_drive="Macintosh HD"
 msg_status "Target disk is ${boot_drive}."
 
 # Detect the target disk's filesystem type (APFS or HFS+)
